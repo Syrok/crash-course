@@ -39,12 +39,12 @@ OK, let's go:
         m.category_list.setFocus(true)
     end function
     ```
-1. Modify home_scene.xml to route to the new screen components by replacing what is there with the following:  
+1. Modify home_scene.brs to route to the new screen components by replacing what is there with the following:  
     ``` java
     function init()
     	? "[home_scene] init"
-    	m.center_square = m.top.findNode("category_screen")
-    	m.center_square.setFocus(true)
+	    m.category_screen = m.top.findNode("category_screen")
+	    m.category_screen.setFocus(true)
     end function
     ```
 1. Save and run the app. It's pretty lame, nothing happens and the category list is empty. Go back to `category_screen.xml` and make this change:
